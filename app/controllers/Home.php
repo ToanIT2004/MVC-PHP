@@ -1,16 +1,13 @@
 <?php 
-   class Home {
+   class Home extends Controller {
+
+      public $model_home;
+      public function __construct() {
+         $this->model_home = $this->model('HomeModel');
+      }
+
       public function index() {
-         echo 'abc';
-      }
-
-      public function detail($id, $slug) {
-         echo 'id sản phẩm'.$id.'<br/>';
-         echo 'slug'.$slug;
-      }
-
-      public function search() {
-         $keyword = $_GET['keyword'];
-         echo 'Từ khóa cần tìm: '. $keyword;
+         $data = $this->model_home->getList();
+         print_r($data);
       }
    }
