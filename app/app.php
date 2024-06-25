@@ -44,7 +44,6 @@ class App
       // Đặt lại kết quả của mảng để chúng liên tiếp bắt đầu từ 0
       $urlArr = array_values($urlArr);
 
-
       if (!empty($urlArr[0])) {
          // ucfirst lấy bảng chữ cái đầu tiên
          $this->__controller = ucfirst($urlArr[0]);
@@ -87,5 +86,4 @@ class App
    {
       require_once 'errors/' . $name . '.php';
    }
-
 }

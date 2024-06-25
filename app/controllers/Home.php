@@ -8,6 +8,7 @@
 
       public function index() {
          $data = $this->model_home->getList();
-         print_r($data);
+         // print_r($data);
+         echo '123';
       }
    }
